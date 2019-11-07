@@ -1,0 +1,636 @@
+<!--
+Writer: Anthony Parras
+FileName: Grid_Attendance.html
+Date: 9/11/2019
+Purpose: HTML for grid attendance page of Kettle.
+-->
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		
+		<title>Grid Attendance</title>
+		<link rel="title_icon" type="image/x-icon" href="kettle.jpg" />
+	</head>	  
+	<body id="main" onload="createTable();">
+			<div class="navbar">
+			  <a href="#home">Home</a>
+			  <a href="Quick_Attendance.html">Q-Attend</a>
+			  <a href="#news">Grid</a>
+			  <a href="#seating">SeatingChart</a>
+			  <div class="dropdown">
+				<button class="dropbtn">Settings
+				  <i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+				  <a href="#">Account</a>
+				  <a href="#">Options</a>
+				  <a href="Login.html">Logout</a>
+				</div>
+			  </div>
+			</div>
+
+			<div class="grid-stack">
+				<div class="grid-stack-item"
+					data-gs-x="10" data-gs-y="0"
+					data-gs-width="6" data-gs-height="5">
+						<div class="grid-stack-item-content"></div>
+				</div>
+				<div class="grid-stack-item"
+					data-gs-x="10" data-gs-y="0"
+					data-gs-width="6" data-gs-height="5">
+						<div class="grid-stack-item-content"></div>
+				</div>
+			</div>
+		<div id="leftsidebar">
+			<p>Course Info</p>
+			<fieldset id="legend">Attendance Shorthand
+			<ul style="list-style-type:none;">
+				<li>P = Present</li>
+				<li>A = Absent</li>
+				<li>T = Tardy</li>
+				<li>L = Late</li>
+				<li>N = No School</li>
+				<li>C = Cancelled</li>
+			</ul>
+			</fieldset>
+		</div>
+		<div id="table">
+		<table class="attendance" id="mainData">
+			<tr class="headers">
+				<th>Name</th>
+				<th>1/20</th>
+				<th>1/21</th>
+				<th>1/22</th>
+				<th>1/23</th>
+				<th>1/24</th>
+				<th>1/25</th>
+				<th>1/26</th>
+			</tr>
+			<tr>
+					<td>Anthony Parras</td>
+					<td>
+					<select class="attendance1" onchange="showTableData(1)">
+						<option value="null"> </option>
+						<option value="P">P</option>
+						<option value="A">A</option>
+						<option value="T">T</option>
+						<option value="L">L</option>
+						<option value="N">N</option>
+						<option value="C">C</option>
+					</select>
+				</td>
+				<td>
+					<select class="attendance1" onchange="showTableData(1)">
+						<option value="null"> </option>
+						<option value="P">P</option>
+						<option value="A">A</option>
+						<option value="T">T</option>
+						<option value="L">L</option>
+						<option value="N">N</option>
+						<option value="C">C</option>
+					</select>
+				</td>
+				<td>
+					<select class="attendance1" onchange="showTableData(1)">
+						<option value="null"> </option>
+						<option value="P">P</option>
+						<option value="A">A</option>
+						<option value="T">T</option>
+						<option value="L">L</option>
+						<option value="N">N</option>
+						<option value="C">C</option>
+					</select>
+				</td>
+				<td>
+					<select class="attendance1" onchange="showTableData(1)">
+						<option value="null"> </option>
+						<option value="P">P</option>
+						<option value="A">A</option>
+						<option value="T">T</option>
+						<option value="L">L</option>
+						<option value="N">N</option>
+						<option value="C">C</option>
+					</select>
+				</td>
+				<td>
+					<select class="attendance1" onchange="showTableData(1)">
+						<option value="null"> </option>
+						<option value="P">P</option>
+						<option value="A">A</option>
+						<option value="T">T</option>
+						<option value="L">L</option>
+						<option value="N">N</option>
+						<option value="C">C</option>
+					</select>
+				</td>
+				<td>
+					<select class="attendance1" onchange="showTableData(1)">
+						<option value="null"> </option>
+						<option value="P">P</option>
+						<option value="A">A</option>
+						<option value="T">T</option>
+						<option value="L">L</option>
+						<option value="N">N</option>
+						<option value="C">C</option>
+					</select>
+				</td>
+				<td>
+					<select class="attendance1" onchange="showTableData(1)">
+						<option value="null"> </option>
+						<option value="P">P</option>
+						<option value="A">A</option>
+						<option value="T">T</option>
+						<option value="L">L</option>
+						<option value="N">N</option>
+						<option value="C">C</option>
+					</select>
+				</td>
+				</tr>
+				
+				<tr>
+					<td>Ross Lowrance</td>
+					<td>
+					<select class="attendance2" onchange="showTableData(2)">
+						<option value="null"> </option>
+						<option value="P">P</option>
+						<option value="A">A</option>
+						<option value="T">T</option>
+						<option value="L">L</option>
+						<option value="N">N</option>
+						<option value="C">C</option>
+					</select>
+				</td>
+				<td>
+					<select class="attendance2" onchange="showTableData(2)">
+						<option value="null"> </option>
+						<option value="P">P</option>
+						<option value="A">A</option>
+						<option value="T">T</option>
+						<option value="L">L</option>
+						<option value="N">N</option>
+						<option value="C">C</option>
+					</select>
+				</td>
+				<td>
+					<select class="attendance2" onchange="showTableData(2)">
+						<option value="null"> </option>
+						<option value="P">P</option>
+						<option value="A">A</option>
+						<option value="T">T</option>
+						<option value="L">L</option>
+						<option value="N">N</option>
+						<option value="C">C</option>
+					</select>
+				</td>
+				<td>
+					<select class="attendance2" onchange="showTableData(2)">
+						<option value="null"> </option>
+						<option value="P">P</option>
+						<option value="A">A</option>
+						<option value="T">T</option>
+						<option value="L">L</option>
+						<option value="N">N</option>
+						<option value="C">C</option>
+					</select>
+				</td>
+				<td>
+					<select class="attendance2" onchange="showTableData(2)">
+						<option value="null"> </option>
+						<option value="P">P</option>
+						<option value="A">A</option>
+						<option value="T">T</option>
+						<option value="L">L</option>
+						<option value="N">N</option>
+						<option value="C">C</option>
+					</select>
+				</td>
+				<td>
+					<select class="attendance2" onchange="showTableData(2)">
+						<option value="null"> </option>
+						<option value="P">P</option>
+						<option value="A">A</option>
+						<option value="T">T</option>
+						<option value="L">L</option>
+						<option value="N">N</option>
+						<option value="C">C</option>
+					</select>
+				</td>
+				<td>
+					<select class="attendance2" onchange="showTableData(2)">
+						<option value="null"> </option>
+						<option value="P">P</option>
+						<option value="A">A</option>
+						<option value="T">T</option>
+						<option value="L">L</option>
+						<option value="N">N</option>
+						<option value="C">C</option>
+					</select>
+				</td>
+				</tr>
+				
+				<tr>
+					<td>John Adams</td>
+					<td>
+					<select class="attendance3" onchange="showTableData(3)">
+						<option value="null"> </option>
+						<option value="P">P</option>
+						<option value="A">A</option>
+						<option value="T">T</option>
+						<option value="L">L</option>
+						<option value="N">N</option>
+						<option value="C">C</option>
+					</select>
+				</td>
+					<td>
+					<select class="attendance3" onchange="showTableData(3)">
+						<option value="null"> </option>
+						<option value="P">P</option>
+						<option value="A">A</option>
+						<option value="T">T</option>
+						<option value="L">L</option>
+						<option value="N">N</option>
+						<option value="C">C</option>
+					</select>
+				</td>
+					<td>
+					<select class="attendance3" onchange="showTableData(3)">
+						<option value="null"> </option>
+						<option value="P">P</option>
+						<option value="A">A</option>
+						<option value="T">T</option>
+						<option value="L">L</option>
+						<option value="N">N</option>
+						<option value="C">C</option>
+					</select>
+				</td>
+					<td>
+					<select class="attendance3" onchange="showTableData(3)">
+						<option value="null"> </option>
+						<option value="P">P</option>
+						<option value="A">A</option>
+						<option value="T">T</option>
+						<option value="L">L</option>
+						<option value="N">N</option>
+						<option value="C">C</option>
+					</select>
+				</td>
+					<td>
+					<select class="attendance3" onchange="showTableData(3)">
+						<option value="null"> </option>
+						<option value="P">P</option>
+						<option value="A">A</option>
+						<option value="T">T</option>
+						<option value="L">L</option>
+						<option value="N">N</option>
+						<option value="C">C</option>
+					</select>
+				</td>
+					<td>
+					<select class="attendance3" onchange="showTableData(3)">
+						<option value="null"> </option>
+						<option value="P">P</option>
+						<option value="A">A</option>
+						<option value="T">T</option>
+						<option value="L">L</option>
+						<option value="N">N</option>
+						<option value="C">C</option>
+					</select>
+				</td>
+				<td>
+					<select class="attendance3" onchange="showTableData(3)">
+						<option value="null"> </option>
+						<option value="P">P</option>
+						<option value="A">A</option>
+						<option value="T">T</option>
+						<option value="L">L</option>
+						<option value="N">N</option>
+						<option value="C">C</option>
+					</select>
+				</td>
+				</tr>
+				
+				<tr>
+					<td>Eric Curtis</td>
+					<td>
+					<select class="attendance4" onchange="showTableData(4)">
+						<option value="null"> </option>
+						<option value="P">P</option>
+						<option value="A">A</option>
+						<option value="T">T</option>
+						<option value="L">L</option>
+						<option value="N">N</option>
+						<option value="C">C</option>
+					</select>
+				</td>
+				<td>
+					<select class="attendance4" onchange="showTableData(4)">
+						<option value="null"> </option>
+						<option value="P">P</option>
+						<option value="A">A</option>
+						<option value="T">T</option>
+						<option value="L">L</option>
+						<option value="N">N</option>
+						<option value="C">C</option>
+					</select>
+				</td>
+				<td>
+					<select class="attendance4" onchange="showTableData(4)">
+						<option value="null"> </option>
+						<option value="P">P</option>
+						<option value="A">A</option>
+						<option value="T">T</option>
+						<option value="L">L</option>
+						<option value="N">N</option>
+						<option value="C">C</option>
+					</select>
+				</td>
+				<td>
+					<select class="attendance4" onchange="showTableData(4)">
+						<option value="null"> </option>
+						<option value="P">P</option>
+						<option value="A">A</option>
+						<option value="T">T</option>
+						<option value="L">L</option>
+						<option value="N">N</option>
+						<option value="C">C</option>
+					</select>
+				</td>
+				<td>
+					<select class="attendance4" onchange="showTableData(4)">
+						<option value="null"> </option>
+						<option value="P">P</option>
+						<option value="A">A</option>
+						<option value="T">T</option>
+						<option value="L">L</option>
+						<option value="N">N</option>
+						<option value="C">C</option>
+					</select>
+				</td>
+				<td>
+					<select class="attendance4" onchange="showTableData(4)">
+						<option value="null"> </option>
+						<option value="P">P</option>
+						<option value="A">A</option>
+						<option value="T">T</option>
+						<option value="L">L</option>
+						<option value="N">N</option>
+						<option value="C">C</option>
+					</select>
+				</td>
+				<td>
+					<select class="attendance4" onchange="showTableData(4)">
+						<option value="null"> </option>
+						<option value="P">P</option>
+						<option value="A">A</option>
+						<option value="T">T</option>
+						<option value="L">L</option>
+						<option value="N">N</option>
+						<option value="C">C</option>
+					</select>
+				</td>
+				</tr>
+			
+		</table>
+					<div class="tooltip">?
+					<p class="tooltiptext">Change Student attendance by selecting attendance 
+					shorthand from dropdown menu in Date column.
+					<br><br>
+					Total Present, Absent, and Tardy selections
+					will be displayed in the right-side table.</p>			
+				</div>
+		</div>
+		<div id="rightsidebar">
+		</div>
+	</body>
+
+</html>
+
+<style>
+body#main {
+	position: relative;
+	background-color: rgb(214,224,255);
+	height: 100%;
+}
+div#table {
+	float: left;
+	position: relative;
+	margin-top: 3em;
+	width: 60%;
+}
+div#rightsidebar{
+	width: 20%;
+	position: relative;
+	right: 0;
+	clear: right;
+	float: right;
+	margin-top: 3em;
+}	
+div#leftsidebar {
+	width: 20%;
+	position: relative;
+	left: 0;
+	clear: left;
+	float: left;
+}
+table.attendance {
+	width: 100%;
+}
+table.attendance th, table.attendance td{
+	border: 2px solid rgba(7,35,76,.3);
+	text-align: center;
+}
+.tooltip {
+	position: relative;
+	display: inline-block;
+	border: 1px solid black;
+	border-radius: 15px;
+}
+.tooltip .tooltiptext {
+	visibility: hidden;
+	width: 120px;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	padding: 5px 0;
+	border-radius: 6px;
+	position: absolute;
+	z-index: 1;
+	width: 180px;
+	top: 100%;
+	left: 50%;
+}
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+}
+
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial;
+  float: top;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+
+<script>
+function createTable() {
+	var mainTbl = document.getElementById("mainData");	//Grab main table
+	var mainTblRows = mainTbl.rows;				//Gather amount of rows in main table
+
+	//Get div to place table in
+		var tblHolder = document.getElementById('rightsidebar');
+	
+	
+	var table = document.createElement("TABLE");	//Create secondary table
+	table.setAttribute("id", "totalData");			//Set ID and Class Attributes
+	table.setAttribute("class", "attendance");		
+	
+	var tblHead = document.createElement("THEAD");	//Create secondary table's header for row of table headers
+	tblHead.setAttribute("id", "totalHeader");
+	
+	var hRow = document.createElement("TR");		//Create Table Row header node
+	hRow.setAttribute("class", "headers");
+		for ( i = 0; i <= 2; i++) {
+			var hRowCell = document.createElement("TH");	//create cell element
+			var cellID = "TH" + String(i);			//create unique id for cell
+			hRowCell.setAttribute("id", cellID);	//set ID to cell before appending
+			if (cellID == "TH0"){
+				hRowCell.innerHTML = "P";			//set innerHTML for cells based on CellID.
+			}
+			else if (cellID == "TH1"){
+				hRowCell.innerHTML = "A";
+			}
+			else if (cellID == "TH2") {
+				hRowCell.innerHTML = "T";
+			}
+			hRow.appendChild(hRowCell);				//Append to header row
+		}
+		tblHead.appendChild(hRow);					
+		table.appendChild(tblHead);							
+		
+	
+	
+	
+	var tblBody = document.createElement("TBODY");	//Create secondary table's body to hold rows
+	tblBody.setAttribute("id", "totalBody");
+
+	//Iterate through main table rows to create matching rows of secondary table after header row
+	for ( i = 1; i < mainTblRows.length; i++) {
+
+		var row = document.createElement("TR");		//create row element
+		var rowID = "row" + String(i);				//create unique id for row
+		row.setAttribute("id", rowID); 		//set ID to row before appending
+		createDataCells(rowID, row);			//Call DataCells function to populate rows
+		tblBody.appendChild(row);					//Append to tbody
+	}
+	//Add secondary table into holder
+	table.appendChild(tblBody);
+	tblHolder.appendChild(table);
+	
+	
+}
+
+function createDataCells(rowID, row) {
+	for ( j = 0; j <= 2; j++){
+		var rowCell = document.createElement("TD"); 	//create cell elements
+		var rowCellID = rowID +"cell" + String(j);				//create unique id for cell
+		rowCell.setAttribute("id", rowCellID);				//set ID to cell
+		rowCell.innerHTML = 0;
+		row.appendChild(rowCell);						//append cell to row
+	}
+}
+
+
+function showTableData(rowNum){
+			var pCell = "row" + String(rowNum) + "cell0";
+			var aCell = "row" + String(rowNum) + "cell1";
+			var tCell = "row" + String(rowNum) + "cell2";
+			
+			var totalP = document.getElementById(pCell).innerHTML = 0;
+			var totalA = document.getElementById(aCell).innerHTML = 0;
+			var totalT = document.getElementById(tCell).innerHTML = 0;
+				var selectID = "select.attendance" + String(rowNum);
+				var selectors = document.querySelectorAll(selectID);
+				
+				for ( i = 0 ; i < selectors.length ; i++ ) { 
+					if (selectors[i].selectedIndex == 1) {
+					totalP = totalP + 1;
+						}
+					else if (selectors[i].selectedIndex == 2) {
+					totalA = totalA + 1;
+						}
+					else if (selectors[i].selectedIndex == 3) {
+					totalT = totalT + 1;
+						}
+				}
+				document.getElementById(pCell).innerHTML = totalP;
+				document.getElementById(aCell).innerHTML = totalA;
+				document.getElementById(tCell).innerHTML = totalT;
+		}
+
+
+</script>
