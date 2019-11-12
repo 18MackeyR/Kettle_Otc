@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+  <head>
+    <script data-require="jquery@1.11.3" data-semver="1.11.3" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script data-require="angular.js@1.2.7" data-semver="1.5.6" src="https://code.angularjs.org/1.5.6/angular.min.js"></script>
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js"></script>
+    <script src="seatChart.directive.js"></script>
+    <h1>Teachers Seating Chart</h1>
+
+  </head>
+
+  <body>
+  
+    <div ng-controller="myCtrl">
+        <div class="seatContainer">
+            Name: <input type="text" id="myText">
+            
+            <!-- <button onclick="myFunction()">change name</button> -->
+            
+            <p id="demo"></p>
+            
+            <script>
+            function myFunction() {
+              var x = document.getElementById("myText").value;
+              document.getElementById("demo").innerHTML = x;
+              document.getElementsById("seatContainer").innerHTML = x;
+            }
+            </script>
+            </div>
+      <seat-chart data="model.seatChart"></seat-chart>
+    </div>
+  </body>
+
+</html>
